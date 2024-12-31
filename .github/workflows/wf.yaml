@@ -1,0 +1,19 @@
+
+name: Test_workFlow
+
+on:
+  push:
+    - main
+  pull_request:
+   - main 
+
+jobs:
+  build_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      -name: welcome steps
+       run: echo "wlecome"
+
+      -name: checkout repositoy
+       uses: actions/checkout@v4
